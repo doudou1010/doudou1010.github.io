@@ -25,9 +25,11 @@ nav img{
 	height: 60px;
 	margin-left: 100px;
 }
+#nav-link{
+	float: right;
+}
 
-nav  a{
-	float:right;
+nav  a{	
 	line-height: 60px;
 	color: #fff;
 	font-size: 1em;
