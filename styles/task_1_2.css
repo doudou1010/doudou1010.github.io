@@ -26,14 +26,12 @@ nav img{
 	margin-left: 100px;
 }
 
-nav ul li{
+nav  a{
 	float:right;
 	line-height: 60px;
-	padding-right: 50px;
-}
-nav ul li a{
 	color: #fff;
 	font-size: 1em;
+	padding-right: 50px;
 	text-decoration: none;
 }
 
