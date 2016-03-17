@@ -1,0 +1,183 @@
+
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: #d9d9d9;
+}
+h1,h2,h3{
+	padding: 0px;
+	margin: 0px;
+}
+input{
+	padding: 2px;
+}
+
+/*nav css*/
+
+nav{
+	height: 60px;
+	width: 100%;
+	background-color: #333333;
+	margin-top: -20px; 
+}
+nav img{
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin-left: 100px;
+}
+
+nav ul li{
+	float: right;
+	line-height: 60px;
+	padding-right: 50px;
+	display: block;
+}
+nav ul li a{
+	color: #fff;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+/*main css*/
+
+.main{
+	clear: both;
+}
+
+article,aside{
+	margin: 30px;
+	padding:30px 20px;
+	background-color: #fff;
+	border-color:  #cccccc;
+	border-style: solid;
+	border-width: 1px ;
+	box-shadow: 1px 1px 1px  #666666;
+}
+
+article p{
+	text-indent: 2em;
+}
+article header h3{
+	color: #737373;
+	margin-top: 20px;
+}
+
+article span,time{
+	color: #a6a6a6;
+	font-size: 0.7em;
+	display: inline-block;
+	padding-top: 20px;
+	padding-right: 2em;
+}
+
+article ul li{
+	display: block;
+	padding-bottom: 5px;
+}
+
+
+article.imglist figure{
+	border-style: solid;
+	border-width: 1px;
+	border-color:  #cccccc;
+	padding: 0px 10px 10px 10px;
+	width: 200px;
+	text-align: center;
+} 
+article.imglist figcaption{
+	padding: 10px;
+}
+article.imglist figure img{
+	width: 200px;
+}
+
+
+article table{
+	border-collapse:collapse;
+	width: 100%;
+}
+article table caption{
+	text-align: left;
+}
+article th,tr,td{
+	border: 1px;
+	border-style: solid;
+	border-color: #cccccc;
+	padding: 0px;
+	margin: 0px;
+}
+article tr{
+	height: 30px;
+}
+article th{
+	text-align: left;
+	padding-left: 5px; 
+	background-color:  #333333;
+	color: #fff;
+}
+article td{
+	padding-left: 5px; 
+}
+tfoot{
+	background-color:  #cccccc;
+}
+
+/*sidebar css*/
+
+aside{
+	margin-top: 50px;
+	margin-bottom: 20px;
+	margin-right: 60px;
+	padding: 20px;
+}
+aside h3{
+	border-left: 5px solid #ccc;
+	font-size: 1em;
+	padding: 10px;
+}
+aside form div{
+	margin: 10px;
+}
+
+.form-r{
+	display: inline-block;
+	text-align: right;
+	width: 30%;
+}
+.form-block{
+	display: inline-block;
+	vertical-align: text-top;
+	margin: 0px;
+}
+.hint{
+	color: #b3b3b3;
+	font-size: 0.8em;
+}
+
+textarea{
+	vertical-align: text-top;
+	width: 50%;
+	height: 8em;
+}
+
+button{
+	background-color: #0047b3;
+	border-style: none;
+	border-radius:10px;
+	width: 100%;
+	height: 40px;
+	color: #fff;
+	font-size: 1em;
+}
+
+/*footer css*/
+
+footer{
+	height: 50px;
+	background-color: #000;
+	color: #fff;
+	font-size: 10px;
+	text-align: center;
+	padding-top: 20px;
+}
