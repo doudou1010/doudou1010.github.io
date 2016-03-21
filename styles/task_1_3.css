@@ -1,0 +1,50 @@
+body,p,figure,div,h2{
+	margin: 0px;
+	padding: 0px;
+}
+img{
+	width: 80px;
+	height: 80px;
+	padding: 0px;
+	margin: 0px;
+	vertical-align:top;
+}
+.defalut{
+	background-color: #fff;
+	border:1px solid #999;
+	margin: 20px;
+	box-sizing: border-box;
+	display: block;
+}
+
+.container{
+	background-color: #eee;
+	border:1px solid #999;
+	margin: 20px;
+	overflow:hidden;
+}
+
+.left{
+	width: 200px;
+	padding:20px;
+	float: left;
+}
+
+.main{
+	padding:20px;
+	margin: 20px 160px 20px 240px;
+}
+.main p{
+	line-height: 25px;
+	margin-top: 10px;
+}
+.right{
+	width: 120px;
+	float: right;
+}
+.right figure{
+	margin: 10px 20px;
+}
+.right img{
+	padding:10px 0px;
+}
