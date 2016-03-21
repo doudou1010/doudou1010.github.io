@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>绝对定位实现居中</title>
+</head>
+<style type="text/css">
+	.container{
+		margin: 0 auto;
+		width: 400px;
+		height: 200px;
+		background-color:#ccc;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -200px;
+		margin-top: -100px;
+		overflow: hidden;
+	}
+	.circle{
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		background-color:#fc0;
+	}
+	.left-top{
+		position: absolute;
+		top: -50px;
+		left: -50px;
+	}
+	.right-bottom{
+		position: absolute;
+		bottom: -50px;
+		right: -50px;
+	}
+</style>
+<body>
+<div class="container">
+	<div class="circle left-top"></div>
+	<div class="circle right-bottom"></div>
+</div>
+
+</body>
+</html>
