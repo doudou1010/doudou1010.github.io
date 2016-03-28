@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>task 10</title> 
+</head>
+ <style type="text/css">
+ .box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border:2px solid #f00;
+  padding: 10px;
+ }
+ .box>div{
+  margin: 10px;
+  width: 150px;
+ }
+ .box>div:not(:last-child){
+  border:2px solid #f00;
+ }
+ .box1{
+  height: 120px;
+ }
+  .box2{
+  height: 100px;
+ }
+  .box3{
+  height: 40px;
+ }
+  .box4{
+  height: 200px;
+  border:2px solid #00f;
+ }
+ @media screen and (max-width: 640px)
+ {
+    .box{
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .box4{
+      order: 1;
+    }
+    .box1{
+      order: 2;
+    }
+    .box2{
+      order: 3;
+    }
+    .box3{
+      order: 4
+    }
+ }
+ </style>
+<body>
+  <div class="box">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+  </div>
+</body>
+</html>
