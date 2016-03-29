@@ -222,6 +222,7 @@ header nav a:hover,.current{
 
 .select-group{
 	display: flex;
+	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: center;
 	margin-top: 40px;
