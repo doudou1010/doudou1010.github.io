@@ -1,0 +1,73 @@
+*{
+	font-family: '微软雅黑';
+	font-weight: normal;
+	letter-spacing: 1px;
+	box-sizing: border-box;
+}
+body,html{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+body{
+	background-image: url(../images/index5.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ul li{
+	list-style: none;
+	padding: 5px 0;
+	color: #fff;
+}
+a{
+	position: relative;  
+	text-decoration: none;
+	color: #fff;
+	outline: none; 
+}
+span>*{
+	color: #000;
+}
+/*以上是全局设置  */
+
+
+/*main css*/
+.wrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
+.main{
+	margin: 20px 0;
+	padding: 30px;
+	display: flex;
+	background-color: #1a1a1a;	
+	opacity: .8;
+}
+
+/*鼠标悬浮动画*/
+a::before{
+	position: absolute;
+	margin-left:20px;
+	display: inline-block;
+	content: "\5B"; 
+	opacity: 0;	
+	transition: opacity .5s,margin-left .5s;
+}
+a::after{
+	position: absolute;
+	margin-left:-20px;
+	display: inline-block;
+	content: "\5D"; 
+	opacity: 0;	
+	transition:  opacity .5s,margin-left .5s;
+}
+a:hover::before {opacity :1; margin-left: -20px; }  
+a:hover::after { opacity :1;margin-left: 10px;}
+
+
+
+
