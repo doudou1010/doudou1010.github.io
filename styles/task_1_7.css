@@ -4,7 +4,15 @@
 body,html,section,div,ul,h1,h2,h3,h4{
 	margin: 0;
 	padding: 0;
+	font-weight: normal;
 	
+}
+
+h1,h2,h3{
+	font-size: 21px;
+}
+h4{
+	font-size: 14px;
 }
 a{
 	text-decoration: none;
@@ -12,6 +20,7 @@ a{
 li{
 	list-style: none;
 }
+
 .flexbox{
 	display: flex;
 	justify-content: center;
@@ -24,6 +33,7 @@ li{
 	background-size: cover;
 	width: 100%;
 	height: 100%;
+	-webkit-filter:brightness(.8);
 }
 .search>div.bg-img{
 	position: absolute;
@@ -35,6 +45,7 @@ li{
 	background-size: cover;
 	width: 100%;
 	height: 100%;
+	-webkit-filter:sepia(.2);
 }
 .guide1>div.bg-img{
 	background-image: url(../images/guide-1.png);
@@ -49,6 +60,7 @@ li{
 	background-size: cover;
 	width: 100%;
 	height: 100%;
+	-webkit-filter:brightness(.6);
 }
 #wrap{
 	min-width: 900px;
@@ -70,18 +82,36 @@ header img:nth-child(1){
 	width: 30px;
 	height: 30px;
 }
+header .left span{
+	color: #000;
+}
 header .left,.right{
 	display: flex;
 	align-items: center;
 	margin: 0 50px;
 	font-size: 14px;
 }
+header .left span{
+	font-size: 21px;
+}
+header a{
+	color: #e74f4d;
+}
 nav{
 	display: inline-block;
+	height: 50px;
 }
 header nav a{
 	color: #9F9F9F;
+	font-size: 14px;
+	padding:15px 20px;
+	display: inline-block;
 }
+header nav a:hover,.current{
+	border-bottom:4px solid #e74f4d;
+	color: #e74f4d;
+}
+
 
 .banner{
 	position: relative;
@@ -90,11 +120,27 @@ header nav a{
 }
 .banner div:nth-child(2){
 	position: absolute;
-	left:70px;
+	left:140px;
 	top: 50%;
 	transform: translateY(-50%);
+	color: #fff;
 }
-
+.banner div:nth-child(2) h1{
+	font-size: 60px;
+}
+.banner div:nth-child(2) p{
+	font-size: 21px;
+	width: 300px;
+}
+.banner div:nth-child(2) input{
+	font-size: 30px;
+	height: 60px;
+	color: #fff;
+	background-color: #e74f4d;
+	border-style: none;
+	width: 300px;
+	margin: 50px 0 0 0;
+}
 .target ul{
 	display: flex;
 	justify-content: space-around;
@@ -112,6 +158,8 @@ header nav a{
 	padding: 0 20%;
 	margin-top: 40px;
 	height: 50px;
+	font-size: 14px;
+	color: #767777;
 }
 .target ul li:not(:first-child) span{
 	border-left: 1px solid #a6a6a6;
@@ -135,7 +183,43 @@ header nav a{
 	justify-content: center;
 	align-items: center;
 	height: 340px;
+	color: #fff;
 }
+.search .shade{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: .2;
+	background-color: #be4e48;
+	z-index: -1;
+}
+.search p{
+	position: relative;
+	font-size: 12px;
+	margin-top: 30px;
+}
+.search input:last-child{
+	background-color: #be4e48;
+	border-style: none;
+	color: #fff;
+	letter-spacing: 20px;
+	text-indent: 20px;
+	font-size: 14px;
+}
+.search p::before{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	width: 30px;
+	height: 40px;
+	top: -55px;
+	border-bottom: solid 2px;
+}
+
 .select-group{
 	display: flex;
 	align-items: center;
@@ -165,36 +249,91 @@ select option{
 	border:1px solid #eee;
 	padding: 10px 5px;
 	background-color: #fff;
+	margin: 0 0 5px 0;
 }
 .picwall div{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 20px;
 	flex: 1;
 }
+.picwall .pic .title{
+	font-size: 14px;
+}
+.picwall .pic .discribe{
+	line-height: 24px;
+}
+
 .picwall div.reverse{
 	flex-direction: column-reverse;
 }
+.picwall .reverse img{
+	margin: 5px 0 0  0;
+}
+.picwall div.reverse .title{
+	order: 1;
+	text-indent: 30px;
+	letter-spacing: 30px;
+	font-size: 20px;
+}
 .picwall span.title{
-	padding:5px;
+	font-size: 14px;
+	color: #000;
 }
 
 
 .guide1{
 	display: flex;
 	justify-content: center;
-	align-items: stretch;
+	align-items: center;
 	height: 600px;
 	width: 100%;
+	text-align: center;
+}
+.guide1 span{
+	text-align: left;
+	width: 65%;
+	line-height: 30px;
+	margin-top: 20px;
+}
+.guide1 .flexbox{
+	position: relative;
+}
+.guide1 input{
+	width: 100px;
+	background-color: #fff;
+	border:2px solid #e25c60;
+	color: #e25c60;
+	font-size: 14px;
+	margin:40px 0 20px 0;
 }
 .guide1>div.bg-img{
 	flex: 2;
 }
-
 .guide1 div:not(:first-child){
 	flex: 1;
+}
+.guide1 .flexbox .tab>div{
+	width: 8px;
+	height: 8px;
+	border-radius: 12px;
+	border:1px #919292 solid ;
+	display: inline-block;
+	margin: 5px;
+}
+.guide1 .flexbox .tab .current{
+	background-color: #919292;
+}
+.triangle-left {
+	position: absolute;
+	left: -25px;
+	top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-right: 25px solid #fff;
+    border-bottom: 15px solid transparent;
 }
 .guide2{
 	display: flex;
@@ -206,21 +345,78 @@ select option{
 	flex: 1;
 	color: #000;
 }
+.guide2 span{
+	color: #fff;
+}
+.guide2 div:nth-child(2) span{
+	color: #000;
+}
 .guide2 div:first-child{
 	background-color: #E8504F;
 	color: #fff;
 }
-
+.guide2  .flexbox:nth-child(2){
+	position: relative;
+}
+.guide2>.flexbox *{
+	font-size: 21px;
+	margin-bottom: 10px;
+}
+.guide2>.flexbox input{
+	width: 170px;
+	height: 50px;
+	background-color: inherit;
+	border:#fff 1px solid;
+	color: #fff;
+}
+.guide2>div:nth-child(2) input{
+	background-color: inherit;
+	border:#e74f4d 1px solid;
+	color: #e74f4d;
+}
+.guide2>.flexbox span:nth-child(2){
+	margin-bottom: 20px;
+}
+.guide2>.flexbox span:nth-child(2)::after{
+	content: "";
+	position: relative;
+	left: 40%;
+	margin-top: 20px;
+	display: block;
+	width: 30px;
+	border-bottom: solid 2px;
+	color: #fff;
+}
+.guide2 div:nth-child(2) span:nth-child(2)::after{
+	color: #ccc;
+}
+.triangle-right {
+	position: absolute;
+	right: -25px;
+	top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-left: 25px solid #fff;
+    border-bottom: 15px solid transparent;
+    z-index: 3;
+}
 .join{
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
 	align-items: center;
 	height: 749px;
+
+}
+.join p,span{
+	font-size: 12px;
+	color: #aaa;
 }
 .join .title{
-	width: 50%;
+	width: 35%;
 	text-align: center;
+	margin-top: 5%;
 }
 .join aside{
 	flex: 1;
@@ -232,16 +428,33 @@ select option{
 	margin: 0 10%;
 	display: flex;
 	justify-content:space-around;
+	margin-bottom: 5%;
+	letter-spacing: 1px;
 	
 }
 .join .contain aside{
 	margin-top: 5px;
+	margin-right: 5%;	
+}
+.join .contain aside section{
+	padding-bottom: 10%;
+	overflow: hidden;
+}
+.join .contain aside section h4{
+	margin-bottom: 5%;
+}
+.join .contain aside section span{
+	float: right;
+	margin-top: -10px;
+	letter-spacing: 0;
+	font-family: "SumSun";
+	color: #231815;
 }
 .join .contain form{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-left: 40px;
+
 }
 .join .contain form input{
 	width: 47%;
@@ -255,6 +468,16 @@ select option{
 }
 .join .contain form>input:last-child{
 	width: 100%;
+}
+.join  div:first-child h3::after{
+	content: "";
+	position: relative;
+	left: 40%;
+	margin: 10px 0;
+	display: block;
+	width: 30px;
+	border-bottom: solid 2px;
+	color: #e74f4d;
 }
 textarea{
 	width: calc(100% - 12px);
