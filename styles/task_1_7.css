@@ -206,7 +206,7 @@ header nav a:hover,.current{
 	color: #fff;
 	letter-spacing: 20px;
 	text-indent: 20px;
-	font-size: 14px;
+	font-size: 14px; 
 }
 .search p::before{
 	content: "";

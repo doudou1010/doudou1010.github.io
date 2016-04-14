@@ -1,0 +1,413 @@
+*{ box-sizing: border-box;border-style: none; list-style: none;outline: none;}
+body,html{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-family: Arial,'黑体';
+	font-size: 14px;
+}
+body{
+	min-width: 1280px;
+	/*禁止文本被选中?*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+nav{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    padding: 0 60px;
+    width:100%;
+    min-width: 960px;
+    height:56px;
+    color:#fff;
+    background-color:#2189bf;    
+}
+nav a{ color: #fff;text-decoration: none; }
+nav .logo{
+	position: absolute;
+	left: 50px;
+	top: 10px;
+	
+}
+nav .login-box input i{
+	
+}
+nav input{
+	padding: 0 35px;
+	height: 30px;
+	width: 300px;
+	border-radius: 20px;
+}
+nav .login-box{
+	position: absolute;
+	right: 50px;
+	top: 13px;
+}
+aside{
+	position:absolute;
+	top:56px;
+	left:0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;	
+	height: calc(100% - 56px);
+    width:260px;
+    color: #6e8095;
+    background-color: #2a2e3d; 
+}
+aside .info{
+	width: 100%;
+	padding: 20px 40px;
+	font-size: 16px;
+}
+aside .info div:first-child{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: #fff;
+}
+aside .info div:first-child>img{
+	padding:4px;
+	width: 60px;
+	height:60px;
+	border:1px solid #fff;
+	border-radius: 50px;
+}
+aside .menu{
+	position: relative;
+	overflow:auto;
+	width: 100%;
+}
+aside .menu>ul{	
+	width: 100%;
+	padding: 0;
+}
+aside .menu ul *{ 	cursor: pointer; }
+aside .menu>li{
+	position: absolute;
+	left: 30px;
+	width: 100%;
+	padding: 10px ;
+}
+
+aside .menu .one>li>*{
+	/*li 里面的内容缩进40像素*/
+	margin-left: 40px;
+}
+aside .menu .one>li{
+	margin-bottom: 5px ;
+	padding: 10px 0;
+}
+
+aside .menu .two>li{
+	margin-top: 15px;
+	margin-left: -20px;
+}
+aside .menu .three>li{
+	margin: 8px 0;
+}
+aside .menu .one .current{
+	background-color:#383E4E;
+}
+
+/****** main css *******/
+
+.main{
+    position: absolute;
+    overflow: hidden;
+    left: 260px;
+    top: 56px;
+    right: 0;
+    bottom: 0;
+    min-width: 1000px;
+}
+.main header{
+	position: relative;
+	height: 30px;
+	width: 100%;
+	line-height: 30px;
+	padding: 0 30px;
+	background-color: #fff;
+	box-shadow: 0 2px 10px #ccc;
+}
+.main header span:not(:first-child)::before{
+	content: '/ ';
+}
+.content{
+    overflow:auto;
+    height: calc(100% - 30px);
+    background-color:#eeeeed;
+    
+    /*或者
+    *overflow-x:hidden;
+    *overflow-y:scroll;
+    */
+}
+section{
+	margin: 20px 70px;	
+}
+.content input{
+	padding: 5px 5px;
+	border:1px solid #cbcbcb;
+}
+.content input.sm{
+	width: 80px;
+	height: 26px;
+}
+.content input.max{
+	width: 140px;
+	height: 26px;
+}
+.part1{
+	display: flex;
+	justify-content: center;
+	padding: 15px 25px;
+	height: 100px;
+	border:1px solid #cacdd0;
+	box-shadow: 0 1px 1px #cacdd0;
+	background-color: #fff;
+}
+.part2{
+	display: flex;
+	height: 65px;
+}
+.part2>div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 8px;
+	border-left:1px solid #cacdd0;
+	border-top:1px solid #cacdd0;
+	background-color: #fff;
+}
+.part2 .finger{
+	width: 30px;
+}
+.part2 .price{
+	display: inherit;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+.price:hover,.part2 .current{
+	border-top: 5px solid #388bc2;
+}
+.price span{
+	margin-top: 5px;
+	font-size: 21px;
+	color: #ec6500;
+}
+.price span>b{
+	font-weight: bold;
+	font-size: 16px;
+	color: #aaa;
+}
+
+.part2 .history{
+	flex: 1.2;
+	margin: 0;
+}
+
+.part3::before{
+	content: '2016年4月份统计';
+	position: absolute;
+	top: -20px;
+}
+.part3{
+	position: relative;
+	display: flex;
+	margin-top: 40px;	
+}
+.part3>div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex: 1;
+	height: 80px;
+	margin-right: 30px;
+	padding: 10px;
+	overflow: hidden;
+	border:1px solid #cacdd0;
+	box-shadow: 0 1px 1px #cacdd0;
+	background-color: #fff;
+}
+.part3>div>div:first-child{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.part3 span:last-child{
+	margin-top: 10px;
+	color: #b0b0b0;
+	font-size: 12px;
+}
+.part3 .rectangle{
+	width: 35%;
+	height: 50px;
+}
+.part3 div:first-child .rectangle{
+	background-color: #44b29e;
+}
+.part3 div:nth-child(2) .rectangle{
+	background-color: #388ac1;
+}
+.part3 div:nth-child(3) .rectangle{
+	background-color: #cf4a36;
+}
+.part3 div:last-child .rectangle{
+	background-color: #e2cd46;
+}
+.part3 .box1{
+	border-left: 5px solid #43b29d;
+}
+.part3 .box2{
+	border-left: 5px solid #388ac1;
+}
+.part3 .box3{
+	border-left: 5px solid #cf4a36;
+}
+.part3 .box4{
+	margin: 0;
+	border-left: 5px solid #e2cd46;
+}
+
+
+.part4{
+	display: flex;
+	height: 450px;
+}
+.part4>div,.part5>div{
+	border:1px solid #cacdd0;
+	box-shadow: 0 1px 1px #cacdd0;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+
+
+.part5{
+	display: flex;
+	height: 350px;
+	margin-bottom: 100px;
+}
+
+.left{
+	margin-right: 10px;
+}
+.left header,.right header{
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	height: 50px;
+	color: #b5b5b5;
+	background-color: #f4f5f7;
+	border-top-right-radius: inherit;
+	border-top-left-radius: inherit;
+	border-bottom:inherit;
+	box-shadow: none;
+}
+
+/*雪碧图代码*/
+
+nav i{	
+	position: absolute;
+	left: 10px;
+	top: 6px;
+	display: inline-block;
+	cursor: pointer;
+	background: url(../images/task9-icon.png) no-repeat;
+}
+.icon-search { background-position: -60px -52px ;width: 17px; height: 17px;}
+
+
+.menu li i{	
+	display: inline-block;
+	float: left;
+	margin:1px 5px 0 5px;
+	background: url(../images/task9-icon.png) no-repeat;
+}
+.menu .icon-r { background-position: -60px -26px ;width: 7px; height: 12px;}
+.menu .icon-b { background-position: -34px 0px ;width: 11px; height: 8px;}
+.menu .icon-pack { background-position: -60px 0px ;width: 12px; height: 12px;}
+.menu .icon-folder { background-position: -34px -52px ;width: 12px; height: 12px;}
+.menu .icon-file { background-position: -34px -26px ;width: 12px; height: 12px;}
+.menu .icon-star { background-position: -86px -26px ;width: 12px; height: 11px;}
+.menu .icon-share { background-position: -86px 0px ;width: 12px; height: 12px;}
+.menu .icon-user { background-position: -86px -52px ;width: 12px; height: 12px;}
+
+.finger i{
+	display: inline-block;
+	background: url(../images/task9main.png) no-repeat;
+}
+
+.finger .icon-finger-l{background-position: -52px 0px ;width: 10px; height: 17px;}
+.finger .icon-finger-r{background-position: -104px 0px ;width: 10px; height: 17px;}
+
+.price i{
+	display: inline-block;
+	background: url(../images/task9main.png) no-repeat;
+}
+.price .icon-rmb{background-position: -78px 0px ;width: 11px; height: 12px;}
+
+.part2 .history i{	
+	display: inline-block;
+	background: url(../images/task9-icon.png) no-repeat;
+}
+.part2 .history .icon-history{background-position: 0px -40px ;width: 32px; height: 32px;margin-right: 10px;}
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 6px;  
+    height: 6px;  
+    background-color: #fff;  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track {   }  
+  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;
+    background-color: #999;  
+}  
+
+/**/
+.flex1-2{
+	flex: 1.5;
+}
+.flex1{
+	flex: 1;
+}
+.flex2{
+	flex: 2;
+}
+.flex3{
+	flex: 3;
+}
+.flex4{
+	flex: 4;
+}
+
+
+input.btn{
+	width: 50px;
+	height: 30px;
+	color: #fff;
+	border-radius: 4px;
+	border-style: none;
+	background-color: #388ac1;
+}
+.pointer{
+	cursor: pointer;
+}
