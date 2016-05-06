@@ -1,0 +1,31 @@
+
+#result{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 20px;
+	color: #fff;
+}
+
+.numbox{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	padding: 5px;
+	min-width: 40px;
+	height: 40px;
+	background-color: #FF0033;
+}
+/*.numboxg{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	padding: 5px;
+	min-width: 40px;
+	height: 40px;
+	background-color: #ccc;
+}*/
+
